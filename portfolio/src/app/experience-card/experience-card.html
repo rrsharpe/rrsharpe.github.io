@@ -29,8 +29,13 @@
     <p>{{ job.location }}</p>
     <p>{{ dateString() }}</p>
     <p>{{ job.description }}</p>
+    <ul>
+      @for (item of job.bullets; track $index) {
+        <li>{{ item }}</li>
+      }
+    </ul>
   </section>
-  <section>
+  <section class="responsibilities-full">
     <h2>Key Responsibilities</h2>
     <section class="responsibilities">
       @for (responsibility of job.responsibilities; track $index) {
