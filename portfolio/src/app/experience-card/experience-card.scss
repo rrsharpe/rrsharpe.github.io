@@ -21,3 +21,22 @@
   margin: 5px;
   min-width: 200px;
 }
+
+@media (max-width: 768px) {
+  .jobCard {
+    flex-direction: column;
+    min-width: unset;
+  }
+
+  .jobDescription {
+    max-width: 100%;
+  }
+
+  .responsibilities {
+    min-width: unset;
+  }
+
+  .responsiblity-card {
+    width: calc(100% - 10px);
+  }
+}
