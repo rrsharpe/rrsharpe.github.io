@@ -1,31 +1,8 @@
 @let job = this.job();
-<!-- <mat-card>
-  <mat-card-header>
-    <mat-card-title>{{ job.employer }} - {{ job.jobTitle }}</mat-card-title>
-    {{ dateString() }}
-    {{ job.location }}
-  </mat-card-header>
-  <mat-card-content>
-    <p>{{ job.description }}</p>
-    <ul>
-      @for (bullet of job.bullets; track $index) {
-        <li>{{ bullet }}</li>
-      }
-    </ul>
-  </mat-card-content>
-  <mat-card-footer>
-    <mat-chip-set aria-label="Languages">
-      @for (item of job.languages; track $index) {
-        <mat-chip>{{ item }}</mat-chip>
-      }
-    </mat-chip-set>
-  </mat-card-footer>
-</mat-card> -->
-
 <mat-card class="jobCard">
   <section class="jobDescription">
-    <h1>{{ job.employer }}</h1>
     <h2>{{ job.jobTitle }}</h2>
+    <h3>{{ job.employer }}</h3>
     <p>{{ job.location }}</p>
     <p>{{ dateString() }}</p>
     <p>{{ job.description }}</p>
@@ -36,7 +13,7 @@
     </ul>
   </section>
   <section class="responsibilities-full">
-    <h2>Key Responsibilities</h2>
+    <h3>Key Responsibilities</h3>
     <section class="responsibilities">
       @for (responsibility of job.responsibilities; track $index) {
         <mat-card class="responsiblity-card">
