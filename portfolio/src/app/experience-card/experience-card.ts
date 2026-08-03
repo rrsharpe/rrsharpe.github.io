@@ -32,8 +32,9 @@ export class ExperienceCard {
     const endDate = job.endDate === 'Present' ? new Date(Date.now()) : job.endDate;
     const years = moment(endDate).diff(job.startDate, 'years');
     const months = moment(endDate).diff(job.startDate, 'months') % 12;
-    const startDateText = moment(job.startDate).format("MMM YYYY");
-    const endDateText = job.endDate === 'Present'?"Present": moment(job.endDate).format("MMM YYYY");
-    return `${startDateText} - ${endDateText} ${years} years ${months} months`;
+    const startDateText = moment(job.startDate).format('MMM YYYY');
+    const endDateText =
+      job.endDate === 'Present' ? 'Present' : moment(job.endDate).format('MMM YYYY');
+    return `${startDateText} — ${endDateText} ${years} years ${months} months`;
   });
 }
