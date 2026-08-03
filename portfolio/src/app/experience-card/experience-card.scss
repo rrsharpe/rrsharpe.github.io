@@ -1,0 +1,23 @@
+.jobCard {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+}
+
+.jobDescription {
+  max-width: 400px;
+}
+
+.responsibilities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 420px;
+}
+
+.responsiblity-card {
+  width: calc(50% - 10px);
+  margin: 5px;
+  min-width: 200px;
+}

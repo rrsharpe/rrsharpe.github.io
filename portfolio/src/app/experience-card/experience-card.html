@@ -1,0 +1,63 @@
+@let job = this.job();
+<!-- <mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ job.employer }} - {{ job.jobTitle }}</mat-card-title>
+    {{ dateString() }}
+    {{ job.location }}
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ job.description }}</p>
+    <ul>
+      @for (bullet of job.bullets; track $index) {
+        <li>{{ bullet }}</li>
+      }
+    </ul>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-chip-set aria-label="Languages">
+      @for (item of job.languages; track $index) {
+        <mat-chip>{{ item }}</mat-chip>
+      }
+    </mat-chip-set>
+  </mat-card-footer>
+</mat-card> -->
+
+<mat-card class="jobCard">
+  <section class="jobDescription">
+    <h1>{{ job.employer }}</h1>
+    <h2>{{ job.jobTitle }}</h2>
+    <p>{{ job.location }}</p>
+    <p>{{ dateString() }}</p>
+    <p>{{ job.description }}</p>
+  </section>
+  <section>
+    <h2>Key Responsibilities</h2>
+    <section class="responsibilities">
+      @for (responsibility of job.responsibilities; track $index) {
+        <mat-card class="responsiblity-card">
+          <mat-card-header>
+            <mat-card-title>
+              {{ responsibility.title }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ responsibility.description }}</p>
+            <mat-chip-set aria-label="Languages">
+              @for (item of responsibility.languages; track $index) {
+                <mat-chip>{{ item }}</mat-chip>
+              }
+            </mat-chip-set>
+            @if (responsibility.achievements) {
+              <h3>Key Achievements:</h3>
+              <ul>
+                @for (achievement of responsibility.achievements; track $index) {
+                  <li>{{ achievement }}</li>
+                }
+              </ul>
+            }
+          </mat-card-content>
+        </mat-card>
+      }
+    </section>
+  </section>
+</mat-card>
