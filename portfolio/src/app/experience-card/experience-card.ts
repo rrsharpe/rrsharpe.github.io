@@ -35,6 +35,9 @@ export class ExperienceCard {
     const startDateText = dayjs(job.startDate).format('MMM YYYY');
     const endDateText =
       job.endDate === 'Present' ? 'Present' : dayjs(job.endDate).format('MMM YYYY');
-    return `${startDateText} — ${endDateText} ${years} years ${months} months`;
+    const yearsString = `${years > 0 ? years + ' year' + (years === 1 ? '' : 's') : ''}`;
+    const monthsString = `${months > 0 ? months + ' month' + (months === 1 ? '' : 's') : ''}`;
+    const duration = `${yearsString} ${monthsString}`.trim();
+    return `${startDateText} — ${endDateText} (${duration})`;
   });
 }
