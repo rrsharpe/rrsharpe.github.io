@@ -13,13 +13,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-width: 420px;
+  min-width: 320px;
 }
 
 .responsiblity-card {
   width: calc(50% - 10px);
   margin: 5px;
-  min-width: 200px;
+  min-width: 180px;
 }
 
 @media (max-width: 768px) {
