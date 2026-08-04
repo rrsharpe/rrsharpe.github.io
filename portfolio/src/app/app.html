@@ -1,7 +1,17 @@
-<router-outlet />
+<mat-toolbar color="primary" class="nav-toolbar">
+  <span class="toolbar-title">Ryan Sharpe</span>
+  <span class="toolbar-spacer"></span>
+  <a mat-button href="#about">About</a>
+  <a mat-button href="#experience">Experience</a>
+</mat-toolbar>
+
 <section class="content">
-  <app-greeting-card></app-greeting-card>
-  @for (jobDescription of jobs; track $index) {
-    <app-experience-card [job]="jobDescription"></app-experience-card>
-  }
+  <div id="about">
+    <app-greeting-card></app-greeting-card>
+  </div>
+  <div id="experience">
+    @for (jobDescription of jobs; track $index) {
+      <app-experience-card [job]="jobDescription"></app-experience-card>
+    }
+  </div>
 </section>
