@@ -30,8 +30,9 @@ export class ExperienceCard {
   readonly dateString = computed(() => {
     const job = this.job();
     const endDate = job.endDate === 'Present' ? new Date(Date.now()) : job.endDate;
-    const years = dayjs(endDate).diff(job.startDate, 'years');
-    const months = dayjs(endDate).diff(job.startDate, 'months') % 12;
+    const totalMonths = dayjs(endDate).diff(job.startDate, 'months') + 1;
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
     const startDateText = dayjs(job.startDate).format('MMM YYYY');
     const endDateText =
       job.endDate === 'Present' ? 'Present' : dayjs(job.endDate).format('MMM YYYY');

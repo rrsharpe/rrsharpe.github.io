@@ -90,8 +90,8 @@ export const jobs: JobDescription[] = [
     languages: [],
     frameworks: [],
     bullets: ['Deployed services to multiple cloud regions via Bitbucket Pipelines CI/CD'],
-    startDate: new Date('September 1, 2021'),
-    endDate: 'Present',
+    startDate: new Date('May 1, 2021'),
+    endDate: new Date('Aug 31, 2021'),
     responsibilities: [
       {
         title: 'Full Stack Development',
@@ -122,8 +122,8 @@ export const jobs: JobDescription[] = [
       'Developed firmware for AirCard and Nighthawk',
       'Shipped consumer products used by real customers',
     ],
-    startDate: new Date('September 1, 2021'),
-    endDate: 'Present',
+    startDate: new Date('January 1, 2019'),
+    endDate: new Date('Dec 31, 2019'),
     responsibilities: [
       {
         title: 'Firmware Development',
