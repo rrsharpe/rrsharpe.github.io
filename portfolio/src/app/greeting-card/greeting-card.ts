@@ -7,6 +7,7 @@ import {
   MatCardTitle,
 } from '@angular/material/card';
 import { MatChip, MatChipSet } from '@angular/material/chips';
+import { MatAnchor } from '@angular/material/button';
 
 @Component({
   selector: 'app-greeting-card',
@@ -18,6 +19,7 @@ import { MatChip, MatChipSet } from '@angular/material/chips';
     MatCardTitle,
     MatChipSet,
     MatChip,
+    MatAnchor,
   ],
   templateUrl: './greeting-card.html',
   styleUrl: './greeting-card.scss',
