@@ -27,3 +27,15 @@ mat-card-content {
     align-self: flex-end;
   }
 }
+
+@media (max-width: 500px) {
+  mat-card-content {
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    section {
+      font-size: 1.1rem;
+    }
+  }
+}
