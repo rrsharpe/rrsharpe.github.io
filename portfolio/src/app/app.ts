@@ -38,7 +38,10 @@ export class App {
       if (stored === 'dark' || stored === 'light') {
         this.isDarkMode.set(stored === 'dark');
       } else {
-        this.isDarkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+        this.isDarkMode.set(
+          typeof window.matchMedia === 'function' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches,
+        );
       }
     }
     effect(() => {
