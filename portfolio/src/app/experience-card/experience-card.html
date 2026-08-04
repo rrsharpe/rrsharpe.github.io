@@ -29,7 +29,7 @@
                 <mat-chip>{{ item }}</mat-chip>
               }
             </mat-chip-set>
-            @if (responsibility.achievements) {
+            @if ((responsibility.achievements?.length ?? 0) > 0) {
               <h3>Key Achievements:</h3>
               <ul>
                 @for (achievement of responsibility.achievements; track $index) {
