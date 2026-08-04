@@ -1,0 +1,48 @@
+.nav-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.toolbar-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.section {
+  width: 100%;
+  display: flow-root;
+
+  &:nth-child(1) {
+    background-color: var(--mat-sys-surface);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--mat-sys-surface-container-high);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--mat-sys-surface-container-highest);
+  }
+}
+
+.content {
+  margin: auto;
+  max-width: 1100px;
+  width: 95%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+app-greeting-card,
+app-experience-card,
+app-contact-card {
+  margin: 20px;
+  display: block;
+  min-width: 280px;
+}

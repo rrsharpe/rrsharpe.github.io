@@ -1,0 +1,58 @@
+.jobCard {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  min-width: fit-content;
+}
+
+.jobDescription {
+  max-width: 400px;
+  padding-right: 20px;
+  padding-left: 10px;
+
+  h3,
+  h2 {
+    margin-bottom: 4px;
+  }
+  p,
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.responsibilities {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 600px;
+}
+
+.responsibilities-full {
+  flex: 1;
+}
+
+.responsiblity-card {
+  width: calc(50% - 10px);
+  margin: 5px;
+  min-width: 180px;
+  --mat-card-elevated-container-color: var(--mat-sys-surface-container-lowest);
+}
+
+@media (max-width: 768px) {
+  .jobCard {
+    flex-direction: column;
+    min-width: unset;
+  }
+
+  .jobDescription {
+    max-width: 100%;
+  }
+
+  .responsibilities {
+    min-width: unset;
+  }
+
+  .responsiblity-card {
+    width: calc(100% - 10px);
+  }
+}

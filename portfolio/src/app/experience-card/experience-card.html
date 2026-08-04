@@ -1,0 +1,46 @@
+@let job = this.job();
+<mat-card class="jobCard">
+  <section class="jobDescription">
+    <h2>{{ job.jobTitle }}</h2>
+    <h3>{{ job.employer }}</h3>
+    <!-- <p>{{ job.location }}</p> -->
+    <p>{{ dateString() }}</p>
+    <p>{{ job.description }}</p>
+    <ul>
+      @for (item of job.bullets; track $index) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  </section>
+  <section class="responsibilities-full">
+    <h3>Highlights</h3>
+    <section class="responsibilities">
+      @for (responsibility of job.responsibilities; track $index) {
+        <mat-card class="responsiblity-card">
+          <mat-card-header>
+            <mat-card-title>
+              {{ responsibility.title }}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ responsibility.description }}</p>
+            <mat-chip-set aria-label="Languages">
+              @for (item of responsibility.languages; track $index) {
+                <mat-chip>{{ item }}</mat-chip>
+              }
+            </mat-chip-set>
+          </mat-card-content>
+          @if ((responsibility.achievements?.length ?? 0) > 0) {
+            <mat-card-footer>
+              <ul>
+                @for (achievement of responsibility.achievements; track $index) {
+                  <li>{{ achievement }}</li>
+                }
+              </ul>
+            </mat-card-footer>
+          }
+        </mat-card>
+      }
+    </section>
+  </section>
+</mat-card>
