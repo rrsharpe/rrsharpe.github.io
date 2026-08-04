@@ -4,7 +4,11 @@
   <a mat-button href="#about">About</a>
   <a mat-button href="#experience">Experience</a>
   <a mat-button href="#contact">Contact</a>
-  <button mat-icon-button (click)="toggleTheme()" [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+  <button
+    mat-icon-button
+    (click)="toggleTheme()"
+    [attr.aria-label]="isDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"
+  >
     <mat-icon>{{ isDarkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
   </button>
 </mat-toolbar>

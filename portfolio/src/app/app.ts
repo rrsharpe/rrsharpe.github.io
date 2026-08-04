@@ -42,6 +42,6 @@ export class App {
   }
 
   toggleTheme(): void {
-    this.isDarkMode.update(v => !v);
+    this.isDarkMode.update((v) => !v);
   }
 }
