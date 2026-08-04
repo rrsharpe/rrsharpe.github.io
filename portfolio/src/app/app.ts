@@ -34,10 +34,19 @@ export class App {
 
   constructor() {
     if (isPlatformBrowser(this.platformId)) {
-      this.isDarkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') {
+        this.isDarkMode.set(stored === 'dark');
+      } else {
+        this.isDarkMode.set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
     }
     effect(() => {
-      this.document.documentElement.style.colorScheme = this.isDarkMode() ? 'dark' : 'light';
+      const dark = this.isDarkMode();
+      this.document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      if (isPlatformBrowser(this.platformId)) {
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+      }
     });
   }
 
