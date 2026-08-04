@@ -13,7 +13,7 @@
     </ul>
   </section>
   <section class="responsibilities-full">
-    <h3>Key Responsibilities</h3>
+    <h3>Highlights</h3>
     <section class="responsibilities">
       @for (responsibility of job.responsibilities; track $index) {
         <mat-card class="responsiblity-card">
@@ -29,15 +29,16 @@
                 <mat-chip>{{ item }}</mat-chip>
               }
             </mat-chip-set>
-            @if ((responsibility.achievements?.length ?? 0) > 0) {
-              <h3>Key Achievements:</h3>
+          </mat-card-content>
+          @if ((responsibility.achievements?.length ?? 0) > 0) {
+            <mat-card-footer>
               <ul>
                 @for (achievement of responsibility.achievements; track $index) {
                   <li>{{ achievement }}</li>
                 }
               </ul>
-            }
-          </mat-card-content>
+            </mat-card-footer>
+          }
         </mat-card>
       }
     </section>
