@@ -15,6 +15,23 @@
   flex: 1 1 auto;
 }
 
+.section {
+  width: 100%;
+  display: flow-root;
+
+  &:nth-child(1) {
+    background-color: var(--mat-sys-surface-container);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--mat-sys-surface-container-high);
+  }
+
+  &:nth-child(3) {
+    background-color: var(--mat-sys-surface-container-highest);
+  }
+}
+
 .content {
   margin: auto;
   max-width: 1100px;

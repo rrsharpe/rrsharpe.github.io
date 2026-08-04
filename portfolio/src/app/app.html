@@ -5,17 +5,23 @@
   <a mat-button href="#experience">Experience</a>
   <a mat-button href="#contact">Contact</a>
 </mat-toolbar>
-
-<section class="content">
-  <div id="about">
-    <app-greeting-card></app-greeting-card>
+<div>
+  <div id="about" class="section">
+    <div class="content">
+      <app-greeting-card></app-greeting-card>
+    </div>
   </div>
-  <div id="experience">
-    @for (jobDescription of jobs; track $index) {
-      <app-experience-card [job]="jobDescription"></app-experience-card>
-    }
+  <div id="experience" class="section">
+    <div class="content">
+      <h2>Experience:</h2>
+      @for (jobDescription of jobs; track $index) {
+        <app-experience-card [job]="jobDescription"></app-experience-card>
+      }
+    </div>
   </div>
-  <div id="contact">
-    <app-contact-card></app-contact-card>
+  <div id="contact" class="section">
+    <div class="content">
+      <app-contact-card></app-contact-card>
+    </div>
   </div>
-</section>
+</div>
