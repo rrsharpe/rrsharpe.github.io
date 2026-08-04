@@ -3,6 +3,7 @@
   <span class="toolbar-spacer"></span>
   <a mat-button href="#about">About</a>
   <a mat-button href="#experience">Experience</a>
+  <a mat-button href="#contact">Contact</a>
 </mat-toolbar>
 
 <section class="content">
@@ -13,5 +14,8 @@
     @for (jobDescription of jobs; track $index) {
       <app-experience-card [job]="jobDescription"></app-experience-card>
     }
+  </div>
+  <div id="contact">
+    <app-contact-card></app-contact-card>
   </div>
 </section>

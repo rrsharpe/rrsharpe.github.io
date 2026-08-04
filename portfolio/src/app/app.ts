@@ -4,11 +4,20 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MatButton, MatAnchor } from '@angular/material/button';
 import { GreetingCard } from './greeting-card/greeting-card';
 import { ExperienceCard } from './experience-card/experience-card';
+import { ContactCard } from './contact-card/contact-card';
 import { jobs } from './job-descriptions';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatToolbar, MatButton, MatAnchor, GreetingCard, ExperienceCard],
+  imports: [
+    RouterOutlet,
+    MatToolbar,
+    MatButton,
+    MatAnchor,
+    GreetingCard,
+    ExperienceCard,
+    ContactCard,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
