@@ -25,6 +25,7 @@
   width: calc(50% - 10px);
   margin: 5px;
   min-width: 180px;
+  --mat-card-elevated-container-color: var(--mat-sys-surface-container-lowest);
 }
 
 @media (max-width: 768px) {
